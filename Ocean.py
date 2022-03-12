@@ -16,6 +16,12 @@ class Dweller:
     def __str__(self):
         return 'XX'
 
+    def getOcean(self):
+        return self.__ocean
+
+    def getHeir(self):
+        pass
+
     def getLocation(self):
         return self.__location
 
@@ -29,24 +35,28 @@ class Dweller:
         self.__location[0] = location[0]
         self.__location[1] = location[1]
 
+    @staticmethod
+    def getRoute():
+        route = [[-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1]]
+        random.shuffle(route)
+        return route
+
     def makeMove(self):
         self.__life = self.__life - 1
         if self.__life > 0:
+            if self.__location[0] == self.__ocean.getSize() - 1:
+                self.__location[0] = -1
+            if self.__location[0] == - self.__ocean.getSize():
+                self.__location[0] = 0
+            if self.__location[1] == self.__ocean.getSize() - 1:
+                self.__location[1] = -1
+            if self.__location[1] == - self.__ocean.getSize():
+                self.__location[1] = 0
             return True
         self.die()
 
     def move(self):
-        route = [[-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1]]
-        random.shuffle(route)
-        if self.__location[0] == self.__ocean.getSize() - 1:
-            self.__location[0] = -1
-        if self.__location[0] == - self.__ocean.getSize():
-            self.__location[0] = 0
-        if self.__location[1] == self.__ocean.getSize() - 1:
-            self.__location[1] = -1
-        if self.__location[1] == - self.__ocean.getSize():
-            self.__location[1] = 0
-        for idx in route:
+        for idx in self.getRoute():
             if str(self.__ocean.getCell([self.__location[0] + idx[0], self.__location[1] + idx[1]])) == '~~':
                 self.__ocean.setCell('~~', self.__location)
                 if self.__location[0] + idx[0] >= self.__ocean.getSize():
@@ -90,7 +100,6 @@ class Ocean:
             self.__queue.remove(dweller)
         elif self.__newborn.count(dweller):
             self.__newborn.remove(dweller)
-
 
     def getCell(self, location):
         return self.__field[location[0]][location[1]]

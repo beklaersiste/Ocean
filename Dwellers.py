@@ -1,3 +1,5 @@
+import copy
+
 from Ocean import Dweller
 
 
@@ -36,7 +38,12 @@ class Plant(Dweller):
         if super().makeMove():
             self.multiply()
 
-    def multiply(self): pass
+    def multiply(self):
+        for idx in self.getRoute():
+            if str(self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])) == '~~':
+                newborn = self.getHeir()
+                self.getOcean().addDweller(newborn, [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
+                break
 
 
 class Plankton(Plant):
@@ -45,6 +52,9 @@ class Plankton(Plant):
 
     def __str__(self):
         return '::'
+
+    def getHeir(self):
+        return Plankton(self.getOcean())
 
 
 class Daphnia(Herbivorous):
@@ -83,7 +93,7 @@ class Tuna(Predator):
 
 class Shark(Predator):
     def __init__(self, ocean):
-        super().__init__(ocean, 10)
+        super().__init__(ocean, 100000)
 
     def __str__(self):
         return 'A<'
