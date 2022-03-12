@@ -2,11 +2,11 @@ from Ocean import Dweller
 
 
 class Predator(Dweller):
-    def __init__(self, ocean):
-        Dweller.__init__(self, ocean)
+    def __init__(self, ocean, life):
+        Dweller.__init__(self, ocean, life)
 
     def makeMove(self):
-        if not super().makeMove():
+        if super().makeMove():
             self.move()
 
     def __str__(self):
@@ -14,11 +14,11 @@ class Predator(Dweller):
 
 
 class Herbivorous(Dweller):
-    def __init__(self, ocean):
-        Dweller.__init__(self, ocean)
+    def __init__(self, ocean, life):
+        Dweller.__init__(self, ocean, life)
 
     def makeMove(self):
-        if not super().makeMove():
+        if super().makeMove():
             self.move()
 
     def __str__(self):
@@ -26,14 +26,14 @@ class Herbivorous(Dweller):
 
 
 class Plant(Dweller):
-    def __init__(self, ocean):
-        super().__init__(ocean)
+    def __init__(self, ocean, life):
+        super().__init__(ocean, life)
 
     def __str__(self):
         return 'P'
 
     def makeMove(self):
-        if not super().makeMove():
+        if super().makeMove():
             self.multiply()
 
     def multiply(self): pass
@@ -41,7 +41,7 @@ class Plant(Dweller):
 
 class Plankton(Plant):
     def __init__(self, ocean):
-        super().__init__(ocean)
+        super().__init__(ocean, 3)
 
     def __str__(self):
         return '::'
@@ -57,7 +57,7 @@ class Daphnia(Herbivorous):
 
 class ClownFish(Predator):
     def __init__(self, ocean):
-        super().__init__(ocean)
+        super().__init__(ocean, 7)
         # Predator.__init__(self)
         # Herbivorous.__init__(self)
 
@@ -83,7 +83,7 @@ class Tuna(Predator):
 
 class Shark(Predator):
     def __init__(self, ocean):
-        super().__init__(ocean)
+        super().__init__(ocean, 10)
 
     def __str__(self):
         return 'A<'

@@ -3,12 +3,12 @@ from typing import List
 
 
 class Dweller:
-    def __init__(self, ocean):
+    def __init__(self, ocean, life):
         self.__ocean: Ocean = ocean
         self.__location = [0, 0]
         self.__sex = random.randrange(2)
         self.__weight = 0
-        self.__life = 0
+        self.__life = life
         self.__hunger = 0
         self.__maxHunger = 0
         self.__speed = 0
@@ -22,15 +22,18 @@ class Dweller:
     def getWeight(self):
         return self.__weight
 
+    def getSex(self):
+        return str(self.__sex)
+
     def setLocation(self, location):
         self.__location[0] = location[0]
         self.__location[1] = location[1]
 
     def makeMove(self):
         self.__life = self.__life - 1
-        if self.__life < 0:
-            self.die()
-            return False
+        if self.__life > 0:
+            return True
+        self.die()
 
     def move(self):
         route = [[-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1]]
@@ -44,7 +47,7 @@ class Dweller:
         if self.__location[1] == - self.__ocean.getSize():
             self.__location[1] = 0
         for idx in route:
-            if str(self.__ocean.fieldInfo([self.__location[0] + idx[0], self.__location[1] + idx[1]])) == '~~':
+            if str(self.__ocean.getCell([self.__location[0] + idx[0], self.__location[1] + idx[1]])) == '~~':
                 self.__ocean.setCell('~~', self.__location)
                 if self.__location[0] + idx[0] >= self.__ocean.getSize():
                     self.__location[0] = 0
@@ -64,10 +67,7 @@ class Dweller:
         pass
 
     def die(self):
-        pass
-
-    def getSex(self):
-        return str(self.__sex)
+        self.__ocean.removeDweller(self)
 
 
 class Ocean:
@@ -84,7 +84,15 @@ class Ocean:
         dweller.setLocation(location)
         self.__newborn.append(dweller)
 
-    def fieldInfo(self, location):
+    def removeDweller(self, dweller):
+        self.setCell('~~', dweller.getLocation())
+        if self.__queue.count(dweller):
+            self.__queue.remove(dweller)
+        elif self.__newborn.count(dweller):
+            self.__newborn.remove(dweller)
+
+
+    def getCell(self, location):
         return self.__field[location[0]][location[1]]
 
     def setCell(self, obj, location):
