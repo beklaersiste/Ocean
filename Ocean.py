@@ -1,10 +1,12 @@
 import random
+from typing import List
+
 
 class Dweller:
-    def __init__(self, ocean, sex):
+    def __init__(self, ocean):
         self.__ocean: Ocean = ocean
         self.__location = [0, 0]
-        self.__sex = sex
+        self.__sex = random.randrange(2)
         self.__weight = 0
         self.__life = 0
         self.__hunger = 0
@@ -16,6 +18,9 @@ class Dweller:
 
     def getLocation(self):
         return self.__location
+
+    def getWeight(self):
+        return self.__weight
 
     def setLocation(self, location):
         self.__location[0] = location[0]
@@ -68,7 +73,8 @@ class Dweller:
 class Ocean:
     def __init__(self, field_size):
         self.__field = [['~~'] * field_size for i in range(field_size)]
-        self.__queue = []
+        self.__queue: List[Dweller] = []
+        self.__newborn: List[Dweller] = []
 
     def getSize(self):
         return len(self.__field)
@@ -76,19 +82,24 @@ class Ocean:
     def addDweller(self, dweller, location):
         self.__field[location[0]][location[1]] = dweller
         dweller.setLocation(location)
+        self.__newborn.append(dweller)
 
     def fieldInfo(self, location):
         return self.__field[location[0]][location[1]]
 
-    def setCell(self, object, location):
-        self.__field[location[0]][location[1]] = object
+    def setCell(self, obj, location):
+        self.__field[location[0]][location[1]] = obj
 
     def makeMove(self):
-        pass
+        for every in self.__queue:
+            if every is not None:
+                every.makeMove()
+        self.__newborn.extend(self.__queue)
+        self.__queue = sorted(list(filter(None, self.__newborn)), key=lambda dweller: dweller.getWeight())
+        self.__newborn.clear()
 
     def print(self):
         for row in self.__field:
             for element in row:
                 print(str(element), end=' ')
             print()
-
