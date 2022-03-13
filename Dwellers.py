@@ -1,35 +1,9 @@
-import copy
-
 from Ocean import Dweller
 
 
-class Predator(Dweller):
-    def __init__(self, ocean, life):
-        Dweller.__init__(self, ocean, life)
-
-    def makeMove(self):
-        if super().makeMove():
-            self.move()
-
-    def __str__(self):
-        return 'XR'
-
-
-class Herbivorous(Dweller):
-    def __init__(self, ocean, life):
-        Dweller.__init__(self, ocean, life)
-
-    def makeMove(self):
-        if super().makeMove():
-            self.move()
-
-    def __str__(self):
-        return 'XH'
-
-
 class Plant(Dweller):
-    def __init__(self, ocean, life):
-        super().__init__(ocean, life)
+    def __init__(self, ocean, life, weight):
+        super().__init__(ocean, life, weight, life, 0)
 
     def __str__(self):
         return 'P'
@@ -46,9 +20,43 @@ class Plant(Dweller):
                 break
 
 
+class Herbivorous(Dweller):
+    def __init__(self, ocean, life, weight, hunger, speed):
+        Dweller.__init__(self, ocean, life, weight, hunger, speed)
+
+    def __str__(self):
+        return 'XH'
+
+    def makeMove(self):
+        if super().makeMove():
+            for idx in range(self.getSpeed()):
+                if not self.eat():
+                    self.move()
+
+    def eat(self):
+        for idx in self.getRoute():
+            victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
+            if isinstance(victim, Plant):
+                self.setHunger(victim.getWeight())
+                self.moveTo(idx)
+                return True
+
+
+class Predator(Dweller):
+    def __init__(self, ocean, life, weight, hunger, speed):
+        Dweller.__init__(self, ocean, life, weight, hunger, speed)
+
+    def makeMove(self):
+        if super().makeMove():
+            self.move()
+
+    def __str__(self):
+        return 'XR'
+
+
 class Plankton(Plant):
     def __init__(self, ocean):
-        super().__init__(ocean, 3)
+        super().__init__(ocean, 3, 1)
 
     def __str__(self):
         return '::'
@@ -58,8 +66,8 @@ class Plankton(Plant):
 
 
 class Daphnia(Herbivorous):
-    def __init__(self, sex):
-        super().__init__(sex)
+    def __init__(self, ocean):
+        super().__init__(ocean, 10, 2, 5, 1)
 
     def __str__(self):
         return '%%'
