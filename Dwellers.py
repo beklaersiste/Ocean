@@ -3,10 +3,10 @@ from Ocean import Dweller
 
 class Plant(Dweller):
     def __init__(self, ocean, life, weight):
-        super().__init__(ocean, life, weight, life, 0)
+        super().__init__(ocean, life, weight, life, 0, 0)
 
     def __str__(self):
-        return 'P'
+        return 'XP'
 
     def makeMove(self):
         if super().makeMove():
@@ -20,9 +20,20 @@ class Plant(Dweller):
                 break
 
 
-class Herbivorous(Dweller):
-    def __init__(self, ocean, life, weight, hunger, speed):
-        Dweller.__init__(self, ocean, life, weight, hunger, speed)
+class Animal(Dweller):
+    def __init__(self, ocean, life, weight, hunger, speed, cooldown):
+        super().__init__(ocean, life, weight, hunger, speed, cooldown)
+
+    def __str__(self):
+        return 'XA'
+
+    def multiply(self):
+        pass
+
+
+class Herbivorous(Animal):
+    def __init__(self, ocean, life, weight, hunger, speed, cooldown):
+        super().__init__(ocean, life, weight, hunger, speed, cooldown)
 
     def __str__(self):
         return 'XH'
@@ -30,21 +41,22 @@ class Herbivorous(Dweller):
     def makeMove(self):
         if super().makeMove():
             for idx in range(self.getSpeed()):
-                if not self.eat():
-                    self.move()
+                if self.eat():
+                    return
+                self.move()
 
     def eat(self):
         for idx in self.getRoute():
             victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
-            if isinstance(victim, Plant):
+            if isinstance(victim, Planet):
                 self.setHunger(victim.getWeight())
                 self.moveTo(idx)
                 return True
 
 
-class Predator(Dweller):
-    def __init__(self, ocean, life, weight, hunger, speed):
-        Dweller.__init__(self, ocean, life, weight, hunger, speed)
+class Predator(Animal):
+    def __init__(self, ocean, life, weight, hunger, speed, cooldown):
+        super().__init__(ocean, life, weight, hunger, speed, cooldown)
 
     def makeMove(self):
         if super().makeMove():
@@ -52,6 +64,14 @@ class Predator(Dweller):
 
     def __str__(self):
         return 'XR'
+
+    def eat(self):
+        for idx in self.getRoute():
+            victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
+            if (isinstance(victim, Animal)) & ((self.getWeight() > victim.getWeight()) & (self.getWeight() / 5 < victim.getWeight())):
+                self.setHunger(victim.getWeight())
+                self.moveTo(idx)
+                return True
 
 
 class Plankton(Plant):
@@ -67,7 +87,7 @@ class Plankton(Plant):
 
 class Daphnia(Herbivorous):
     def __init__(self, ocean):
-        super().__init__(ocean, 10, 2, 5, 1)
+        super().__init__(ocean, 7, 2, 4, 1, 2)
 
     def __str__(self):
         return '%%'
@@ -75,7 +95,7 @@ class Daphnia(Herbivorous):
 
 class ClownFish(Predator):
     def __init__(self, ocean):
-        super().__init__(ocean, 7)
+        super().__init__(ocean, 15, 5, 6, 2, 3)
         # Predator.__init__(self)
         # Herbivorous.__init__(self)
 
@@ -84,16 +104,16 @@ class ClownFish(Predator):
 
 
 class Octopus(Predator):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, ocean):
+        super().__init__(ocean, 30, 7, 10, 3, 6)
 
     def __str__(self):
         return 'oЖ'
 
 
 class Tuna(Predator):
-    def __init__(self, sex):
-        super().__init__(sex)
+    def __init__(self, ocean):
+        super().__init__(ocean, 45, 12, 16, 2, 8)
 
     def __str__(self):
         return '>-'
@@ -101,15 +121,15 @@ class Tuna(Predator):
 
 class Shark(Predator):
     def __init__(self, ocean):
-        super().__init__(ocean, 100000)
+        super().__init__(ocean, 60, 30, 20, 3, 10)
 
     def __str__(self):
         return 'A<'
 
 
 class Whale(Herbivorous):
-    def __init__(self, sex):
-        super().__init__(sex)
+    def __init__(self, ocean):
+        super().__init__(ocean, 100, 50, 30, 2, 15)
 
     def __str__(self):
         return 'Qo'

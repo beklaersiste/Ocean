@@ -3,7 +3,7 @@ from typing import List
 
 
 class Dweller:
-    def __init__(self, ocean, life, weight, hunger, speed):
+    def __init__(self, ocean, life, weight, hunger, speed, cooldown):
         self.__ocean: Ocean = ocean
         self.__location = [0, 0]
         self.__sex = random.randrange(2)
@@ -12,6 +12,8 @@ class Dweller:
         self.__hunger = hunger
         self.__maxHunger = hunger
         self.__speed = speed
+        self.__cooldown = int(cooldown / 3)
+        self.__maxCooldown = cooldown
 
     def __str__(self):
         return 'XX'
@@ -52,6 +54,7 @@ class Dweller:
     def makeMove(self):
         self.__life = self.__life - 1
         self.__hunger = self.__hunger - 1
+        self.__cooldown = self.__cooldown - 1
         if (self.__life > 0) & (self.__hunger > 0):
             if self.__location[0] == self.__ocean.getSize() - 1:
                 self.__location[0] = -1
