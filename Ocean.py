@@ -10,10 +10,13 @@ class Dweller:
         self.__life = life
         self.__weight = weight
         self.__hunger = hunger
-        self.__maxHunger = hunger
+        self.__satiety = hunger
         self.__speed = speed
-        self.__cooldown = int(cooldown / 3)
-        self.__maxCooldown = cooldown
+        if self.__sex:
+            self.__cooldown = self.__maxCooldown = 0
+        else:
+            self.__cooldown = int(cooldown / 3)
+            self.__maxCooldown = cooldown
 
     def __str__(self):
         return 'XX'
@@ -36,14 +39,26 @@ class Dweller:
     def getSpeed(self):
         return self.__speed
 
+    def getCooldown(self):
+        return self.__cooldown
+
+    def isHungry(self):
+        if self.__hunger <= self.__satiety / 2:
+            return True
+        else:
+            return False
+
     def setLocation(self, location):
         self.__location[0] = location[0]
         self.__location[1] = location[1]
 
     def setHunger(self, food_weight):
         self.__hunger = self.__hunger + food_weight
-        if self.__hunger > self.__maxHunger:
-            self.__hunger = self.__maxHunger
+        if self.__hunger > self.__satiety:
+            self.__hunger = self.__satiety
+
+    def setCooldown(self):
+        self.__cooldown = self.__maxCooldown
 
     @staticmethod
     def getRoute():
@@ -51,25 +66,27 @@ class Dweller:
         random.shuffle(route)
         return route
 
+    def checkLocation(self):
+        if self.__location[0] == self.__ocean.getSize() - 1:
+            self.__location[0] = -1
+        if self.__location[0] == - self.__ocean.getSize():
+            self.__location[0] = 0
+        if self.__location[1] == self.__ocean.getSize() - 1:
+            self.__location[1] = -1
+        if self.__location[1] == - self.__ocean.getSize():
+            self.__location[1] = 0
+
     def makeMove(self):
         self.__life = self.__life - 1
         self.__hunger = self.__hunger - 1
         self.__cooldown = self.__cooldown - 1
-        if (self.__life > 0) & (self.__hunger > 0):
-            if self.__location[0] == self.__ocean.getSize() - 1:
-                self.__location[0] = -1
-            if self.__location[0] == - self.__ocean.getSize():
-                self.__location[0] = 0
-            if self.__location[1] == self.__ocean.getSize() - 1:
-                self.__location[1] = -1
-            if self.__location[1] == - self.__ocean.getSize():
-                self.__location[1] = 0
+        if self.__life > 0 and self.__hunger > 0:
             return True
         self.die()
 
     def moveTo(self, location):
-        if isinstance(self.__ocean.getCell(location), Dweller):
-            self.__ocean.getCell(location).die()
+        if isinstance(self.__ocean.getCell([self.__location[0] + location[0], self.__location[1] + location[1]]), Dweller):
+            self.__ocean.getCell([self.__location[0] + location[0], self.__location[1] + location[1]]).die()
         self.__ocean.setCell('~~', self.__location)
         self.__location[0] = self.__location[0] + location[0]
         self.__location[1] = self.__location[1] + location[1]
@@ -79,7 +96,7 @@ class Dweller:
         for idx in self.getRoute():
             if str(self.__ocean.getCell([self.__location[0] + idx[0], self.__location[1] + idx[1]])) == '~~':
                 self.moveTo(idx)
-                break
+                return
 
     def eat(self):
         pass

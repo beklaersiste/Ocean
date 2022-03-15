@@ -10,6 +10,7 @@ class Plant(Dweller):
 
     def makeMove(self):
         if super().makeMove():
+            self.checkLocation()
             self.multiply()
 
     def multiply(self):
@@ -29,6 +30,20 @@ class Animal(Dweller):
 
     def multiply(self):
         pass
+        # for idxPartner in self.getRoute():
+        #     partner = self.getOcean().getCell(
+        #         [self.getLocation()[0] + idxPartner[0], self.getLocation()[1] + idxPartner[1]])
+        #     if (type(partner) is type(self)) & (partner.getSex() is not self.getSex()) & (
+        #             (self.getCooldown() <= 0) & (partner.getCooldown() <= 0)):
+        #         for idx in self.getRoute():
+        #             if str(self.getOcean().getCell(
+        #                     [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])) == '~~':
+        #                 newborn = self.getHeir()
+        #                 self.getOcean().addDweller(newborn,
+        #                                            [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
+        #                 self.setCooldown()
+        #                 partner.setCooldown()
+        #                 return True
 
 
 class Herbivorous(Animal):
@@ -41,6 +56,10 @@ class Herbivorous(Animal):
     def makeMove(self):
         if super().makeMove():
             for idx in range(self.getSpeed()):
+                self.checkLocation()
+                if self.getCooldown() <= 0:
+                    if self.multiply():
+                        return
                 if self.eat():
                     return
                 self.move()
@@ -48,7 +67,7 @@ class Herbivorous(Animal):
     def eat(self):
         for idx in self.getRoute():
             victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
-            if isinstance(victim, Planet):
+            if isinstance(victim, Plant):
                 self.setHunger(victim.getWeight())
                 self.moveTo(idx)
                 return True
@@ -60,7 +79,14 @@ class Predator(Animal):
 
     def makeMove(self):
         if super().makeMove():
-            self.move()
+            for idx in range(self.getSpeed()):
+                self.checkLocation()
+                if self.getCooldown() <= 0 and not self.isHungry():
+                    if self.multiply():
+                        return
+                if self.eat():
+                    return
+                self.move()
 
     def __str__(self):
         return 'XR'
@@ -68,7 +94,7 @@ class Predator(Animal):
     def eat(self):
         for idx in self.getRoute():
             victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
-            if (isinstance(victim, Animal)) & ((self.getWeight() > victim.getWeight()) & (self.getWeight() / 5 < victim.getWeight())):
+            if isinstance(victim, Animal) and self.getWeight() > victim.getWeight() > self.getWeight() / 5:
                 self.setHunger(victim.getWeight())
                 self.moveTo(idx)
                 return True
@@ -90,14 +116,12 @@ class Daphnia(Herbivorous):
         super().__init__(ocean, 7, 2, 4, 1, 2)
 
     def __str__(self):
-        return '%%'
+        return '%m' if self.getSex() == '0' else '%f'
 
 
 class ClownFish(Predator):
     def __init__(self, ocean):
         super().__init__(ocean, 15, 5, 6, 2, 3)
-        # Predator.__init__(self)
-        # Herbivorous.__init__(self)
 
     def __str__(self):
         return '>@'
