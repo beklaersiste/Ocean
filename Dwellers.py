@@ -29,21 +29,19 @@ class Animal(Dweller):
         return 'XA'
 
     def multiply(self):
-        pass
-        # for idxPartner in self.getRoute():
-        #     partner = self.getOcean().getCell(
-        #         [self.getLocation()[0] + idxPartner[0], self.getLocation()[1] + idxPartner[1]])
-        #     if (type(partner) is type(self)) & (partner.getSex() is not self.getSex()) & (
-        #             (self.getCooldown() <= 0) & (partner.getCooldown() <= 0)):
-        #         for idx in self.getRoute():
-        #             if str(self.getOcean().getCell(
-        #                     [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])) == '~~':
-        #                 newborn = self.getHeir()
-        #                 self.getOcean().addDweller(newborn,
-        #                                            [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
-        #                 self.setCooldown()
-        #                 partner.setCooldown()
-        #                 return True
+        for idxPartner in self.getRoute():
+            partner = self.getOcean().getCell(
+                [self.getLocation()[0] + idxPartner[0], self.getLocation()[1] + idxPartner[1]])
+            if type(partner) is type(self) and partner.getSex() is not self.getSex() and self.getCooldown() <= 0 and partner.getCooldown() <= 0:
+                for idx in self.getRoute():
+                    if str(self.getOcean().getCell(
+                            [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])) == '~~':
+                        newborn = self.getHeir()
+                        self.getOcean().addDweller(newborn,
+                                                   [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
+                        self.setCooldown()
+                        partner.setCooldown()
+                        return True
 
 
 class Herbivorous(Animal):
@@ -118,6 +116,9 @@ class Daphnia(Herbivorous):
     def __str__(self):
         return '%m' if self.getSex() == '0' else '%f'
 
+    def getHeir(self):
+        return Daphnia(self.getOcean())
+
 
 class ClownFish(Predator):
     def __init__(self, ocean):
@@ -125,6 +126,9 @@ class ClownFish(Predator):
 
     def __str__(self):
         return '>@'
+
+    def getHeir(self):
+        return ClownFish(self.getOcean())
 
 
 class Octopus(Predator):
@@ -134,6 +138,9 @@ class Octopus(Predator):
     def __str__(self):
         return 'oЖ'
 
+    def getHeir(self):
+        return Octopus(self.getOcean())
+
 
 class Tuna(Predator):
     def __init__(self, ocean):
@@ -141,6 +148,9 @@ class Tuna(Predator):
 
     def __str__(self):
         return '>-'
+
+    def getHeir(self):
+        return Tuna(self.getOcean())
 
 
 class Shark(Predator):
@@ -150,6 +160,9 @@ class Shark(Predator):
     def __str__(self):
         return 'A<'
 
+    def getHeir(self):
+        return Shark(self.getOcean())
+
 
 class Whale(Herbivorous):
     def __init__(self, ocean):
@@ -157,3 +170,6 @@ class Whale(Herbivorous):
 
     def __str__(self):
         return 'Qo'
+
+    def getHeir(self):
+        return Whale(self.getOcean())

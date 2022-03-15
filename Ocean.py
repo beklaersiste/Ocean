@@ -12,11 +12,8 @@ class Dweller:
         self.__hunger = hunger
         self.__satiety = hunger
         self.__speed = speed
-        if self.__sex:
-            self.__cooldown = self.__maxCooldown = 0
-        else:
-            self.__cooldown = int(cooldown / 3)
-            self.__maxCooldown = cooldown
+        self.__cooldown = int(cooldown / 3)
+        self.__maxCooldown = cooldown
 
     def __str__(self):
         return 'XX'
@@ -58,7 +55,8 @@ class Dweller:
             self.__hunger = self.__satiety
 
     def setCooldown(self):
-        self.__cooldown = self.__maxCooldown
+        self.__cooldown = self.__maxCooldown if self.getSex() else 0
+
 
     @staticmethod
     def getRoute():
