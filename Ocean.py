@@ -3,14 +3,14 @@ from typing import List
 
 
 class Dweller:
-    def __init__(self, ocean, life, weight, hunger, speed, cooldown):
+    def __init__(self, ocean, life, weight, satiety, speed, cooldown):
         self.__ocean: Ocean = ocean
         self.__location = [0, 0]
         self.__sex = random.randrange(2)
         self.__life = life
         self.__weight = weight
-        self.__hunger = hunger
-        self.__satiety = hunger
+        self.__satiety = satiety
+        self.__maxSatiety = satiety
         self.__speed = speed
         self.__cooldown = int(cooldown / 3)
         self.__maxCooldown = cooldown
@@ -27,11 +27,17 @@ class Dweller:
     def getLocation(self):
         return self.__location
 
+    def getSex(self):
+        return self.__sex
+
+    def getLife(self):
+        return self.__life
+
     def getWeight(self):
         return self.__weight
 
-    def getSex(self):
-        return str(self.__sex)
+    def getSatiety(self):
+        return self.__satiety
 
     def getSpeed(self):
         return self.__speed
@@ -40,7 +46,7 @@ class Dweller:
         return self.__cooldown
 
     def isHungry(self):
-        if self.__hunger <= self.__satiety / 2:
+        if self.__satiety <= self.__maxSatiety / 2:
             return True
         else:
             return False
@@ -49,14 +55,13 @@ class Dweller:
         self.__location[0] = location[0]
         self.__location[1] = location[1]
 
-    def setHunger(self, food_weight):
-        self.__hunger = self.__hunger + food_weight
-        if self.__hunger > self.__satiety:
-            self.__hunger = self.__satiety
+    def setSatiety(self, food_weight):
+        self.__satiety = self.__satiety + food_weight
+        if self.__satiety > self.__maxSatiety:
+            self.__satiety = self.__maxSatiety
 
     def setCooldown(self):
         self.__cooldown = self.__maxCooldown if self.getSex() else 0
-
 
     @staticmethod
     def getRoute():
@@ -76,9 +81,9 @@ class Dweller:
 
     def makeMove(self):
         self.__life = self.__life - 1
-        self.__hunger = self.__hunger - 1
+        self.__satiety = self.__satiety - 1
         self.__cooldown = self.__cooldown - 1
-        if self.__life > 0 and self.__hunger > 0:
+        if self.__life > 0 and self.__satiety > 0:
             return True
         self.die()
 
@@ -114,6 +119,12 @@ class Ocean:
 
     def getSize(self):
         return len(self.__field)
+
+    def getQueue(self):
+        return self.__queue
+
+    def getNewborn(self):
+        return self.__newborn
 
     def addDweller(self, dweller, location):
         self.__field[location[0]][location[1]] = dweller
