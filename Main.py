@@ -14,11 +14,13 @@ class Interface:
 
     def start(self):
         print("0. create new ocean\n1. load saved ocean\n2. random ocean")
-        match self.input(0, 1):
+        match self.input(0, 2):
             case 0:
                 self.__newOcean()
             case 1:
                 self.__download()
+            case 2:
+                self.__random()
             case _:
                 print("Error")
                 return
@@ -83,6 +85,15 @@ class Interface:
     def __newOcean(self):
         print("enter ocean size: ")
         self.ocean = Ocean(self.input(2, 64))
+
+    def __random(self):
+        self.ocean = Ocean(random.randrange(12, 24))
+        dwellerType = ['::', '::', '::', '%%', '%%', '%%', '>@', '>@', '>@', 'oЖ', '>-', 'A<', 'Qo']
+        for xCoordinate in range(self.ocean.getSize()):
+            for yCoordinate in range(self.ocean.getSize()):
+                if random.randrange(4) != 0:
+                    dweller = self.__makeDweller(random.choice(dwellerType))
+                    self.ocean.addDweller(dweller, [xCoordinate, yCoordinate])
 
     def __download(self):
         with open('Preservation.json') as file:

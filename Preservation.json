@@ -1,0 +1,2125 @@
+{
+    "field size": 18,
+    "queue": [
+        {
+            "type": "::",
+            "location": [
+                2,
+                13
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                4,
+                12
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                6,
+                10
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                7,
+                -2
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                10,
+                13
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                8,
+                15
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                4
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                13
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                15
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                -1
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                13,
+                6
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                15,
+                -1
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                14,
+                4
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                14,
+                11
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                13,
+                -1
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                1,
+                7
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                1,
+                12
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                4,
+                13
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                9,
+                12
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                8,
+                16
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                10,
+                16
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                16
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                13,
+                3
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                10
+            ],
+            "sex": 0,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                15,
+                1
+            ],
+            "sex": 1,
+            "life": 3,
+            "weight": 1,
+            "satiety": 3,
+            "speed": 0,
+            "cooldown": 0
+        },
+        {
+            "type": "::",
+            "location": [
+                2,
+                12
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                3,
+                13
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                7,
+                10
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                6,
+                -2
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                9,
+                1
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                9,
+                14
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                12
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                15
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                0
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                4
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                13
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                6
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                14,
+                -1
+            ],
+            "sex": 0,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                14,
+                0
+            ],
+            "sex": 1,
+            "life": 2,
+            "weight": 1,
+            "satiety": 2,
+            "speed": 0,
+            "cooldown": -1
+        },
+        {
+            "type": "::",
+            "location": [
+                1,
+                13
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                3,
+                12
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                6,
+                11
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                8,
+                14
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                9,
+                13
+            ],
+            "sex": 1,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                9,
+                15
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                10,
+                15
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                11,
+                16
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                3
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                12,
+                5
+            ],
+            "sex": 0,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                14,
+                2
+            ],
+            "sex": 1,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "::",
+            "location": [
+                15,
+                0
+            ],
+            "sex": 1,
+            "life": 1,
+            "weight": 1,
+            "satiety": 1,
+            "speed": 0,
+            "cooldown": -2
+        },
+        {
+            "type": "%%",
+            "location": [
+                3,
+                8
+            ],
+            "sex": 1,
+            "life": 10,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": 0
+        },
+        {
+            "type": "%%",
+            "location": [
+                2,
+                8
+            ],
+            "sex": 1,
+            "life": 10,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": 0
+        },
+        {
+            "type": "%%",
+            "location": [
+                2,
+                10
+            ],
+            "sex": 1,
+            "life": 9,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": -1
+        },
+        {
+            "type": "%%",
+            "location": [
+                2,
+                5
+            ],
+            "sex": 1,
+            "life": 9,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": -1
+        },
+        {
+            "type": "%%",
+            "location": [
+                1,
+                1
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 3,
+            "speed": 1,
+            "cooldown": 1
+        },
+        {
+            "type": "%%",
+            "location": [
+                2,
+                11
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": 0
+        },
+        {
+            "type": "%%",
+            "location": [
+                3,
+                11
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": -2
+        },
+        {
+            "type": "%%",
+            "location": [
+                2,
+                6
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": 2
+        },
+        {
+            "type": "%%",
+            "location": [
+                3,
+                7
+            ],
+            "sex": 0,
+            "life": 8,
+            "weight": 2,
+            "satiety": 3,
+            "speed": 1,
+            "cooldown": 0
+        },
+        {
+            "type": "%%",
+            "location": [
+                4,
+                6
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": 2
+        },
+        {
+            "type": "%%",
+            "location": [
+                4,
+                11
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": 1
+        },
+        {
+            "type": "%%",
+            "location": [
+                5,
+                8
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": -2
+        },
+        {
+            "type": "%%",
+            "location": [
+                7,
+                7
+            ],
+            "sex": 1,
+            "life": 8,
+            "weight": 2,
+            "satiety": 3,
+            "speed": 1,
+            "cooldown": 2
+        },
+        {
+            "type": "%%",
+            "location": [
+                11,
+                7
+            ],
+            "sex": 0,
+            "life": 8,
+            "weight": 2,
+            "satiety": 4,
+            "speed": 1,
+            "cooldown": -2
+        },
+        {
+            "type": "%%",
+            "location": [
+                13,
+                10
+            ],
+            "sex": 0,
+            "life": 8,
+            "weight": 2,
+            "satiety": 5,
+            "speed": 1,
+            "cooldown": -2
+        },
+        {
+            "type": ">@",
+            "location": [
+                3,
+                -1
+            ],
+            "sex": 1,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                3,
+                0
+            ],
+            "sex": 0,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                2
+            ],
+            "sex": 0,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                9,
+                2
+            ],
+            "sex": 1,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                1,
+                10
+            ],
+            "sex": 0,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                4,
+                10
+            ],
+            "sex": 1,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                5,
+                6
+            ],
+            "sex": 1,
+            "life": 15,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 1
+        },
+        {
+            "type": ">@",
+            "location": [
+                4,
+                -1
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                4,
+                0
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                14
+            ],
+            "sex": 0,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">@",
+            "location": [
+                7,
+                3
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                8,
+                12
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                8,
+                1
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                13,
+                14
+            ],
+            "sex": 1,
+            "life": 14,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                -3,
+                3
+            ],
+            "sex": 0,
+            "life": 14,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">@",
+            "location": [
+                1,
+                11
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                3,
+                9
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                3,
+                2
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                5,
+                5
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                4,
+                7
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                3,
+                14
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                5,
+                -1
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                7,
+                6
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                9,
+                3
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                6
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                7
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                7,
+                11
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                15
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                6,
+                5
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                7,
+                15
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                10,
+                10
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">@",
+            "location": [
+                10,
+                14
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                10,
+                3
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                11,
+                11
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                12,
+                14
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                13,
+                8
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                14,
+                16
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                14,
+                7
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": ">@",
+            "location": [
+                14,
+                6
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 5,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                15,
+                15
+            ],
+            "sex": 1,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": 2
+        },
+        {
+            "type": ">@",
+            "location": [
+                16,
+                11
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 6,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": ">@",
+            "location": [
+                -3,
+                14
+            ],
+            "sex": 0,
+            "life": 13,
+            "weight": 5,
+            "satiety": 4,
+            "speed": 2,
+            "cooldown": -1
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                6,
+                0
+            ],
+            "sex": 0,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                6,
+                13
+            ],
+            "sex": 1,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                5,
+                13
+            ],
+            "sex": 1,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 6
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                6,
+                12
+            ],
+            "sex": 0,
+            "life": 28,
+            "weight": 7,
+            "satiety": 9,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                8,
+                5
+            ],
+            "sex": 1,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                8,
+                10
+            ],
+            "sex": 0,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                13,
+                1
+            ],
+            "sex": 0,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": "o\u0416",
+            "location": [
+                13,
+                15
+            ],
+            "sex": 1,
+            "life": 28,
+            "weight": 7,
+            "satiety": 10,
+            "speed": 3,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                0,
+                8
+            ],
+            "sex": 1,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                5,
+                11
+            ],
+            "sex": 0,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                4,
+                -2
+            ],
+            "sex": 1,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                9,
+                11
+            ],
+            "sex": 0,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                11,
+                9
+            ],
+            "sex": 0,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                14,
+                9
+            ],
+            "sex": 1,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                13,
+                0
+            ],
+            "sex": 1,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": ">-",
+            "location": [
+                14,
+                8
+            ],
+            "sex": 1,
+            "life": 43,
+            "weight": 12,
+            "satiety": 16,
+            "speed": 2,
+            "cooldown": 0
+        },
+        {
+            "type": "A<",
+            "location": [
+                -1,
+                14
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                -2,
+                -1
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                -1,
+                15
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 19,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                1,
+                2
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                3,
+                1
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 19,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                6,
+                3
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                -1,
+                17
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 18,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                8,
+                7
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                7,
+                0
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                9,
+                4
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                11,
+                3
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                9,
+                -2
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 19,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                11,
+                14
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 19,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                15,
+                6
+            ],
+            "sex": 1,
+            "life": 58,
+            "weight": 30,
+            "satiety": 20,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                -1,
+                2
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 19,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "A<",
+            "location": [
+                15,
+                4
+            ],
+            "sex": 0,
+            "life": 58,
+            "weight": 30,
+            "satiety": 18,
+            "speed": 3,
+            "cooldown": 1
+        },
+        {
+            "type": "Qo",
+            "location": [
+                0,
+                1
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 28,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                0,
+                5
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                0,
+                7
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                0,
+                -2
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 29,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                2,
+                1
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 29,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                0,
+                -1
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 29,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                3,
+                6
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 29,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                4,
+                15
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                1,
+                6
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                2,
+                4
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 28,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                5,
+                7
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 28,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                8,
+                3
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 28,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                7,
+                12
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                11,
+                5
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                10,
+                9
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 28,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                10,
+                12
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                8,
+                0
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                12,
+                11
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                15,
+                10
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                12,
+                12
+            ],
+            "sex": 1,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                13,
+                11
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                17,
+                11
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        },
+        {
+            "type": "Qo",
+            "location": [
+                -1,
+                6
+            ],
+            "sex": 0,
+            "life": 98,
+            "weight": 50,
+            "satiety": 30,
+            "speed": 2,
+            "cooldown": 3
+        }
+    ],
+    "newborn": []
+}
