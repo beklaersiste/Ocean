@@ -1,5 +1,7 @@
 import os
 import json
+import random
+
 from Ocean import Ocean
 import Dwellers
 
@@ -11,7 +13,7 @@ class Interface:
         self.ocean: Ocean
 
     def start(self):
-        print("0. create new ocean\n1. load saved ocean")
+        print("0. create new ocean\n1. load saved ocean\n2. random ocean")
         match self.input(0, 1):
             case 0:
                 self.__newOcean()
@@ -32,6 +34,16 @@ class Interface:
             elif key == '':
                 return begin
             print("invalid input, please try again")
+
+    def __makeDweller (self, image):
+        dwellersType = {'::': Dwellers.Plankton(self.ocean),
+                        '%%': Dwellers.Daphnia(self.ocean),
+                        '>@': Dwellers.ClownFish(self.ocean),
+                        'oЖ': Dwellers.Octopus(self.ocean),
+                        '>-': Dwellers.Tuna(self.ocean),
+                        'A<': Dwellers.Shark(self.ocean),
+                        'Qo': Dwellers.Whale(self.ocean)}
+        return dwellersType[image]
 
     def __printMenu(self):
         clear()
@@ -73,10 +85,26 @@ class Interface:
         self.ocean = Ocean(self.input(2, 64))
 
     def __download(self):
-        pass
+        with open('Preservation.json') as file:
+            data = json.load(file)
+        self.ocean = Ocean(data['field size'])
+        for characteristic in data['queue']:
+            dweller = self.__makeDweller(characteristic['type'])
+            dweller.setSex(characteristic['sex'])
+            dweller.setLife(characteristic['life'])
+            dweller.setWeight(characteristic['weight'])
+            dweller.setSatiety(characteristic['satiety'])
+            dweller.setSpeed(characteristic['speed'])
+            dweller.setCooldown(characteristic['cooldown'])
+            self.ocean.addDweller(dweller, characteristic['location'])
+        self.ocean.makeMove()
+        for characteristic in data['newborn']:
+            newborn = self.__makeDweller(characteristic['type'])
+            newborn.setSex(characteristic['sex'])
+            self.ocean.addDweller(newborn, characteristic['location'])
 
     def __save(self):
-        data = {'file size': self.ocean.getSize(), 'queue': [], 'newborn': []}
+        data = {'field size': self.ocean.getSize(), 'queue': [], 'newborn': []}
         for dweller in self.ocean.getQueue():
             if isinstance(dweller, Dwellers.Dweller):
                 data['queue'].append({
@@ -89,8 +117,6 @@ class Interface:
                     'speed': dweller.getSpeed(),
                     'cooldown': dweller.getCooldown()
                 })
-            else:
-                data['queue'].append(None)
         for newborn in self.ocean.getNewborn():
             if isinstance(newborn, Dwellers.Dweller):
                 data['newborn'].append({
@@ -105,6 +131,8 @@ class Interface:
         xСoordinate = self.input(0, self.ocean.getSize()-1)
         print("column - ", end='')
         yСoordinate = self.input(0, self.ocean.getSize() - 1)
+        if str(self.ocean.getCell([xСoordinate, yСoordinate])) != '~~':
+            print("attention! this cell is occupied")
         print("choose creature:\n0. CANCEL\n1. plankton\n2. daphnia\n3. clown fish\n4. octopus\n5. tuna\n6. shark\n7. whale")
         match self.input(0, 7):
             case 0:

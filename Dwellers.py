@@ -39,8 +39,8 @@ class Animal(Dweller):
                         newborn = self.getHeir()
                         self.getOcean().addDweller(newborn,
                                                    [self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
-                        self.setCooldown()
-                        partner.setCooldown()
+                        self.restartCooldown()
+                        partner.restartCooldown()
                         return True
 
 
@@ -66,7 +66,7 @@ class Herbivorous(Animal):
         for idx in self.getRoute():
             victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
             if isinstance(victim, Plant):
-                self.setSatiety(victim.getWeight())
+                self.increaseSatiety(victim.getWeight())
                 self.moveTo(idx)
                 return True
 
@@ -93,7 +93,7 @@ class Predator(Animal):
         for idx in self.getRoute():
             victim = self.getOcean().getCell([self.getLocation()[0] + idx[0], self.getLocation()[1] + idx[1]])
             if isinstance(victim, Animal) and self.getWeight() > victim.getWeight() > self.getWeight() / 5:
-                self.setSatiety(victim.getWeight())
+                self.increaseSatiety(victim.getWeight())
                 self.moveTo(idx)
                 return True
 
@@ -114,7 +114,7 @@ class Daphnia(Herbivorous):
         super().__init__(ocean, 10, 2, 5, 1, 2)
 
     def __str__(self):
-        return '%m' if self.getSex() == 0 else '%f'
+        return '%%'
 
     def getHeir(self):
         return Daphnia(self.getOcean())

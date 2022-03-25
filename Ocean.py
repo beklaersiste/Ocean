@@ -55,12 +55,30 @@ class Dweller:
         self.__location[0] = location[0]
         self.__location[1] = location[1]
 
-    def setSatiety(self, food_weight):
-        self.__satiety = self.__satiety + food_weight
+    def setSex(self, sex):
+        self.__sex = sex
+
+    def setLife(self, life):
+        self.__life = life
+
+    def setWeight(self, weight):
+        self.__weight = weight
+
+    def setSatiety(self, satiety):
+        self.__satiety = satiety
+
+    def setSpeed(self, speed):
+        self.__speed = speed
+
+    def setCooldown(self, cooldown):
+        self.__cooldown = cooldown
+
+    def increaseSatiety(self, foodWeight):
+        self.__satiety = self.__satiety + foodWeight
         if self.__satiety > self.__maxSatiety:
             self.__satiety = self.__maxSatiety
 
-    def setCooldown(self):
+    def restartCooldown(self):
         self.__cooldown = self.__maxCooldown if self.getSex() else 0
 
     @staticmethod
